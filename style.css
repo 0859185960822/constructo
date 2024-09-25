@@ -69,7 +69,15 @@
 .navbar-nav .nav-link {
     color: #fff;
 }
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link:hover{
+    color: #e3d510;
+}
+
+/* .active {
+    color: #e3d510;
+} */
+
+#button-home{
     color: #e3d510;
 }
 
@@ -142,32 +150,32 @@
 
 /* mulai about */
 #about{
-    width: 80%;
-    margin: 40px auto;
+    width: 90%;
+    margin: 50px ;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 300px); */
+    gap: 100px;
 }
 .line-about{
     width: 150px;
     height: 1px;
     background: #e3d510;
     margin: 20px; 
-    margin-top: 10%;
+    /* margin-top: 10%; */
 }
 .title{
     text-align: left;
     font-size: 4vmin;
     /* margin-bottom: 0%; */
 }
-
-.content {
-    display: flex;
-    align-items: center; /* Agar vertikal sejajar jika teks dan gambar beda tinggi */
+.img-about img{
+    width: 500px;
+    height: auto;
 }
 
 .text {
     flex: 1; /* Agar teks mengisi sisi kiri */
-}
-.isi{
-    font-size: 2.5vmin;
 }
 .sub-title{
     font-size: 4vmin;
@@ -176,32 +184,22 @@
     opacity: 70%;
     margin-bottom: 50px; /* Jarak antara sub-title dan elemen di bawahnya */
 }
-.image {
-    flex: 1; /* Agar gambar mengisi sisi kanan */
-    text-align: right; /* Jika ingin gambar menempel ke kanan */
-}
-
-.image img {
-    max-width: 100%; /* Agar gambar tidak melebihi kontainer */
-    height: auto;
-}
 
 /* menghitung */
 .hitung {
-    display: flex;
-    justify-content: space-between; /* Agar ada ruang antar elemen */
-    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2);
     background-image: url('/img/konstruksi4.jpg'); /* Ganti dengan path gambar Anda */
     background-size: cover; /* Gambar akan menutupi seluruh area */
     background-attachment: fixed; /* Agar gambar tidak bergerak saat scroll */
-    display: flex;
     justify-content: center;
-    height: 35vh; /* Tinggi kontainer 100% dari viewport */
+    height: 45vh; /* Tinggi kontainer 100% dari viewport */
 }
 .counter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     height: 35vh; /* Tinggi kontainer 100% dari viewport */
     background-position: center;
     color: #e3d510; /* Warna teks agar terlihat di atas background */
@@ -211,13 +209,15 @@
     font-size: 2rem;
     font-weight: bold;
     padding: 20px;
+    padding-left: 30px;
     border-radius: 10px;
     display: flexbox;
 }
 .counter-container p {
     margin: 0;
     color: white; /* Mengatur warna teks menjadi putih */
-    font-size: 1.2rem;
+    font-size: 0.7 rem;
+    font-weight: bold;
 }
 /* service */
 #services{
@@ -382,7 +382,7 @@
 .executive-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3);
+    /* grid-template-rows: repeat(3); */
     gap: 1px;
 }
 .executive-content img{
@@ -455,7 +455,7 @@
 .recent-news{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3);
+    /* grid-template-rows: repeat(3); */
     gap: 30px;
 }
 .recent-news img{
@@ -568,5 +568,107 @@
     }
     .nav-links li{
         margin: 30px auto;
+    }
+
+    /* about */
+    #about{
+        width: 90%;
+        margin: 50px ;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 300px);
+        gap: 100px;
+    }
+
+    .img-about img{
+        /* margin-top: 0; */
+        width: 400px;
+        height: auto;
+    }
+    .title{
+        text-align: left;
+        font-size: 2vmin;
+        /* margin-bottom: 0%; */
+    }
+
+    .text {
+        flex: 1; /* Agar teks mengisi sisi kiri */
+    }
+    .sub-title{
+        font-size: 3vmin;
+        text-transform: uppercase;
+        color: black;
+        opacity: 70%;
+        margin-bottom: 20px; /* Jarak antara sub-title dan elemen di bawahnya */
+    }
+
+    .ctn{
+        padding: 8px 15px;
+        background: #e3d510;
+        color: whitesmoke;
+        font-size: 3vmin;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    /* hitung */
+    .hitung {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4);
+        height: auto;
+        align-items: center;
+    }
+    .counter-container {
+        height: auto;
+        background-position: center;
+        color: #e3d510; /* Warna teks agar terlihat di atas background */
+        margin: 10px;
+        text-align: center;
+    }
+
+    /* projects */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 300px);
+        gap: 1px;
+    }
+
+    /* executive manager */
+    .executive-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3);
+        gap: 50px;
+    }
+
+    /* testimonial */
+    .testimonial{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        grid-template-rows: repeat(2);
+    }
+
+    /* recnet news */
+    .recent-news{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3);
+        gap: 30px;
+    }
+
+    /* contact */
+    #contact{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2);
+        gap: 1px;
+        width: 80%;
+        margin-left: 40px;
+        margin-top: 0;
     }
 }
