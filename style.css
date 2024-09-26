@@ -330,6 +330,7 @@ header i:hover{
 #exe-manager{
     width: 90%;
     margin: 40px auto;
+    /* background-color: #f5f8fa; */
 }
 .executive-manager{
     text-align: center;
@@ -479,11 +480,18 @@ header i:hover{
     margin-left: 40px;
     margin-top: 0;
 }
-.contact-detail a{
+.social-icons a{
     color: #e3d510;
 }
-.contact-detail a:hover{
+.social-icons a:hover{
     color:black;
+}
+.contact-detail p a{
+    color: black;
+    text-decoration: none;
+}
+.contact-detail p a:hover{
+    color: #e3d510;
 }
 
 /* map */
