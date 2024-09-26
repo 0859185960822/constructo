@@ -328,7 +328,7 @@ header i:hover{
 
 /* executive-manager */
 #exe-manager{
-    width: 80%;
+    width: 90%;
     margin: 40px auto;
 }
 .executive-manager{
@@ -356,7 +356,7 @@ header i:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* grid-template-rows: repeat(3); */
-    gap: 1px;
+    gap: 50px;
 }
 .executive-content img{
     width: 300px;
