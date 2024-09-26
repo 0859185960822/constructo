@@ -543,6 +543,14 @@ header i:hover{
         margin: 30px auto;
     }
 
+    .text-dalam h1{
+        font-size: 3rem;
+    }
+
+    .text-dalam p{
+        font-size: 0.75rem;
+    }
+
     /* about */
     #about{
         width: 90%;
