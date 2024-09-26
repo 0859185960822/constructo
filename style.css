@@ -599,6 +599,7 @@ header i:hover{
         grid-template-rows: repeat(4);
         height: auto;
         align-items: center;
+        padding-bottom: 20px;
     }
     .counter-container {
         height: auto;
