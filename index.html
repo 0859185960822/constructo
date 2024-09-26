@@ -103,6 +103,12 @@
     </div>
     <!-- end modal -->
 
+    <!-- Tombol Scroll ke atas -->
+        <button id="scrollToTopBtn" onclick="scrollToTop()">
+            &#8593; <!-- Panah atas -->
+        </button>
+
+        <!-- about -->
     <section id="about">
         <div class="text">
             <div class="title">
@@ -418,6 +424,29 @@ document.addEventListener("DOMContentLoaded", function() {
             navbar.classList.add("navbar-transparent");
           }
         };
+
+
+// Tombol scroll to top
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  var aboutSection = document.getElementById("navbar");
+
+  // Fungsi untuk men-scroll halaman ke atas
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Fungsi untuk memunculkan/menghilangkan tombol berdasarkan posisi scroll
+  window.onscroll = function() {
+    // Ukuran jarak dari atas elemen about
+    var aboutTop = aboutSection.offsetTop;
+
+    // Tampilkan tombol hanya jika posisi scroll melewati elemen #about
+    if (window.scrollY > aboutTop) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  };
     </script>
 </body>
 </html>
