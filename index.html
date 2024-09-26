@@ -18,7 +18,7 @@
             <div class="row align-items-center">
                 <!-- Copyright Text -->
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0"><i class="bi bi-geo-alt"></i> Address: 4578 Marmora Road, Glasgow, D04 89GR <i class="bi bi-telephone">(800) 123-0045 (8</i></p>
+                    <p class="mb-0"><i class="bi bi-geo-alt">Address: 4578 Marmora Road, Glasgow, D04 89GR</i><i class="bi bi-telephone">(800) 123-0045</i></p>
                 </div>
                 <!-- Social Media Icons -->
                 <div class="col-md-6 text-center text-md-end">
@@ -181,7 +181,7 @@
     <div class="quotes">
         <div class="line-quotes"></div>
         <p>IF YOU CAN ENVISION IT, THEN WE CAN BUILD IT ! <br> TELL US MORE ABOUT YOUR PROJECT</p>
-        <a href="#" class="ctn2">CONTACT US</a>
+        <a href="#" class="ctn2" data-bs-toggle="modal" data-bs-target="#contactModal">CONTACT US</a>
     </div>
     <!-- projects -->
     <section class="projects" id="projects">
@@ -407,6 +407,17 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
         
+// biar navabar tetap dan transparan
+        window.onscroll = function() {
+          var navbar = document.getElementsByClassName("navbar");
+          if (window.scrollY > 50) {
+            navbar.classList.remove("navbar-transparent");
+            navbar.classList.add("navbar-solid");
+          } else {
+            navbar.classList.remove("navbar-solid");
+            navbar.classList.add("navbar-transparent");
+          }
+        };
     </script>
 </body>
 </html>
